@@ -98,7 +98,9 @@ class DateFish {
 
     public static void main(String[] args) {
 
+        System.out.println("update test");
         System.out.println(DateFish.fish());
+
 
     }
 }
