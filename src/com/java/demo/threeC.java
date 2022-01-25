@@ -1,6 +1,5 @@
 package com.java.demo;
 
-import org.omg.CORBA.PUBLIC_MEMBER;
 import java.util.Scanner;
 public class threeC {
     public static void main(String[] args){
