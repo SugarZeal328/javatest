@@ -43,7 +43,7 @@ public class TicketSale {
     }
 }
 
-class SaleWindow1 implements Runnable{
+class  SaleWindow1 implements Runnable{
 
     private static int ticket = 100;
     //共用obj同一把锁

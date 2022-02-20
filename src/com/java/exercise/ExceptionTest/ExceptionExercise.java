@@ -7,6 +7,11 @@ import org.junit.Test;
 对数据类型不一致的（NumberFormatException),缺失命令行参数(ArrayIndexOutBoundException)
 和除0(ArithmeticException)及输入负数(EcDef 自定义异常类)进行异常处理
  */
+/*
+throw和throws的区别
+throw：生成一个异常对象并抛出，使用在方法内部———手动抛出,在方法头中
+throws：处理异常的方式，用于处理异常，使用在方法声明的末尾，相当于try-catch-finally
+ */
 public class ExceptionExercise {
     public static void main(String args[]){
 
