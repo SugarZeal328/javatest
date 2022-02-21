@@ -1,3 +1,5 @@
+package com.java.demo;
+
 public class LCSequence {
 
     //求解str1 和 str2 的最长公共子序列

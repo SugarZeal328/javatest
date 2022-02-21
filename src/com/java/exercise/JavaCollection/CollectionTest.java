@@ -7,6 +7,8 @@ set：元素无序，不可重复的集合，集合，无序，确定性，互�
  */
 /*
 Map接口：双列数据，保存具有映射关系"key value"一对一对的集合，一个key对应一个value
+
+1.集合collection中存储的如果是自定义对象，需要自定义类重写equals()，设计collection中方法的调用
  */
 
 import org.junit.Test;
