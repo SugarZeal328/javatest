@@ -7,7 +7,10 @@ public class ThreadTest {
     public static void main(String args[]){
         //创建thread子类对象
         MyThread1 t1 = new MyThread1();
-        MyThread2 t2 = new MyThread2();
+        Runnable t2 = new MyThread2();
+
+        Thread thread = new Thread(t2);
+
         //创建thread的匿名类对象
         new Thread(){
 
@@ -20,8 +23,10 @@ public class ThreadTest {
         //给主线程，从线程命名
         Thread.currentThread().setName("main-0");
         t1.setName("Mythread1-0");
+        thread.setName("runable");
         //一个对象只能start()一次，创建一个线程
         t1.start();
+        thread.start();
 
 
         for (int i = 0; i < 10; i++){

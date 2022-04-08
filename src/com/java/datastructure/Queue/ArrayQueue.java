@@ -1,6 +1,5 @@
-package com.java.datastructure;
+package com.java.datastructure.Queue;
 
-import java.lang.reflect.Array;
 import java.util.Arrays;
 import java.util.Scanner;
 

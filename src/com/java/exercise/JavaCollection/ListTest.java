@@ -80,4 +80,6 @@ public class ListTest {
         list.remove(2);//移除索引为2的元素
         //list.remove(new Integer(2));//移除值为2的元素
     }
+
+
 }

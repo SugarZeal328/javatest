@@ -32,7 +32,7 @@ Map：双列数据，存储key-value对的数据，
         如果此位置上数据不为空，（意味着此位置上存在一个或多个数据（以链表的形式存在）），则比较key1与
         多个值的哈希值：
             如果key1的哈希值与已经存在的数据的哈希值不同，则(key1, value1)添加成功-------情况2
-            如果key1的哈希值与已经存在的数据哈希值相同，继续比较：调用key1所在类的equals(),比较：
+            如果key1的哈希值与已经存在的数据哈希值相同，继续比较：调用value1所在类的equals(),比较：
                 返回false，(key1, value1)添加成功-------情况3
                 返回true，使用value1替换value2，添加变成替换
         补充：情况2和情况3，此时(key1, value1)和原来的数据以链表的形式存储
@@ -113,6 +113,7 @@ public class MapTest {
     @Test
     public void test2() {
 
+        //自定义comparator比较器
         Comparator comparator = new Comparator() {
             @Override
             public int compare(Object o1, Object o2) {

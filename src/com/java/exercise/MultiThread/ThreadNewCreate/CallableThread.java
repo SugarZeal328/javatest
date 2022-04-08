@@ -2,7 +2,6 @@ package com.java.exercise.MultiThread.ThreadNewCreate;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutionException;
-import java.util.concurrent.Future;
 import java.util.concurrent.FutureTask;
 
 /*
@@ -40,7 +39,7 @@ public class CallableThread {
 class CallThread implements Callable {
 
     @Override
-    public Object call() throws Exception {
+    public Integer call() throws Exception {
         int sum = 0;
         for (int i = 1; i<= 100; i++){
 

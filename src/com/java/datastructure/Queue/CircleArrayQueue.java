@@ -1,4 +1,4 @@
-package com.java.datastructure;
+package com.java.datastructure.Queue;
 
 import java.util.Scanner;
 

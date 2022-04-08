@@ -1,8 +1,4 @@
-package com.java.datastructure;
-
-import com.sun.org.apache.xerces.internal.xs.ItemPSVI;
-
-import sun.reflect.misc.ReflectUtil;
+package com.java.datastructure.LinkedList.SingleLinkedList;
 
 import java.util.Stack;
 
@@ -26,9 +22,16 @@ public class SingleLinkedList {
         llm.addByOrder(new HeroNode(3,"吴用", "智多星"));
 
         llm1.addByOrder(new HeroNode(2,"卢俊义", "玉麒麟"));
+        llm1.addByOrder(new HeroNode(4,"我的饭", "我的饭"));
+        llm1.addByOrder(new HeroNode(5,"我的", "我的"));
 
 
-        llm.mergeSingleLinkedList(llm, llm1);
+
+        //llm.list();
+        //llm1.list();
+
+        SingleLinkedListManage.mergeSingleLinkedList(llm, llm1);
+
 
 
         System.out.println();
@@ -38,33 +41,6 @@ public class SingleLinkedList {
 
 
 
-}
-
-//每个HeroNode对象就是一个节点
-class HeroNode {
-    public int no;
-    public String name;
-    public String nickName;
-    public HeroNode next;//指向下一个节点
-
-    public HeroNode(){
-
-    }
-
-    public HeroNode(int no, String name, String nickName) {
-        this.no = no;
-        this.name = name;
-        this.nickName = nickName;
-    }
-
-    @Override
-    public String toString() {
-        return "HeroNode{" +
-                "no=" + no +
-                ", name='" + name + '\'' +
-                ", nickName='" + nickName + '\'' +
-                '}';
-    }
 }
 
 class SingleLinkedListManage {
@@ -276,25 +252,31 @@ class SingleLinkedListManage {
     }
 
     //合并两个有序链表，并输出打印
-    public void mergeSingleLinkedList(SingleLinkedListManage sll1, SingleLinkedListManage sll2){
+    public static void mergeSingleLinkedList(SingleLinkedListManage sll1, SingleLinkedListManage sll2){
         SingleLinkedListManage mergeLLM = new SingleLinkedListManage();
         HeroNode p = mergeLLM.getHead();
         HeroNode temp1 = sll1.head.next;
         HeroNode temp2 = sll2.head.next;
         while (temp1 != null && temp2 != null){
+            //节点1中的序号大，则添加节点2
             if (temp1.no > temp2.no){
-                p.next = temp2;
+                HeroNode node = temp2;
+                p.next = node;
                 temp2 = temp2.next;
-            }else if (temp1.no < temp2.no){
-                p.next = temp1.next;
+             //节点2大序号大，则添加节点1
+            }else {
+                HeroNode node = temp1;
+                p.next = node;
                 temp1 = temp1.next;
             }
+
             p = p.next;
 
         }
-
         if (temp1 != null) p.next = temp1;
         if (temp2 != null) p.next = temp2;
+
+
 
         mergeLLM.list();
 

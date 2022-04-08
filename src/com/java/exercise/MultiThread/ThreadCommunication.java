@@ -13,6 +13,8 @@ public class ThreadCommunication {
         t2.setName("线程2");
 
         t1.start();
+
+
         t2.start();
     }
 

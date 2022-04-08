@@ -1,4 +1,4 @@
-package com.java.datastructure;
+package com.java.datastructure.SparseArr;
 
 import java.util.Arrays;
 
